@@ -1,0 +1,11 @@
+﻿@model ExampleBlock
+
+
+@Html.PropertyFor(x => x.Headline)
+@Html.PropertyFor(x => x.Body)
+<figure>
+    <picture>
+        <source srcset="@Url.ContentUrl(Model.Image)" alt="" media="(min-width: 768px")/>
+        <img srcset="@Url.ContentUrl(Model.Image)" alt="" width="795" height="530"/>
+    </picture>
+</figure>
