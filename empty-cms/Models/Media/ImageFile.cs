@@ -15,7 +15,8 @@ namespace empty_cms.Models.Media
         [Display(
             Name = "Alt Text"
             )]
-        public virtual string? AltText { get; set; }
+        [Required]
+        public virtual required string AltText { get; set; }
 
     }
 }

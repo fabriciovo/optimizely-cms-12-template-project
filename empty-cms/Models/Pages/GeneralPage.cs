@@ -25,21 +25,21 @@ namespace empty_cms.Models.Pages
     )]
         public virtual string? HeadlineSlug { get; set; }
 
-    
 
-    [Display(
-        Name = "Body",
-        GroupName = SystemTabNames.Content,
-        Order = 30
-        )]
-    public virtual XhtmlString? Body { get; set; }
+
+        [Display(
+            Name = "Body",
+            GroupName = SystemTabNames.Content,
+            Order = 30
+            )]
+        public virtual XhtmlString? Body { get; set; }
 
         [Display(
     Name = "Content Area",
     GroupName = SystemTabNames.Content,
     Order = 40
     )]
-        [AllowedTypes(AllowedTypes = new[] {typeof(ExampleBlock), typeof(LinkGridBlock)})]
+        [AllowedTypes(AllowedTypes = new[] { typeof(ExampleBlock), typeof(CardListBlock), typeof(OtherCardListBlock) })]
         public virtual ContentArea? ContentArea { get; set; }
 
     }

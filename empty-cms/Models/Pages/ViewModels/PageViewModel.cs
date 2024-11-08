@@ -1,7 +1,4 @@
-﻿
-
-
-namespace empty_cms.Models.Pages.ViewModels
+﻿namespace empty_cms.Models.Pages.ViewModels
 {
     public abstract class PageViewModel
 {

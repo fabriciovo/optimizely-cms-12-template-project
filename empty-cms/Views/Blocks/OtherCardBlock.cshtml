@@ -1,0 +1,41 @@
+﻿@using empty_cms.Utils;
+@model OtherCardBlock
+
+<style>
+    .other-card {
+        cursor: pointer;
+        color: #012F3C;
+        font-family: 'Proxima Nova', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29.23px;
+        text-align: left;
+        text-decoration: none;
+    }
+
+        .other-card img {
+            border-radius: 10px;
+        }
+
+        .other-card:hover img {
+            border: 5px solid;
+        }
+
+        .other-card:hover {
+            text-decoration: underline;F
+        }
+</style>
+
+<a class="other-card d-flex flex-column" href="@Url.ContentUrl(Model.Link)" target="_blank" rel="noopener noreferrer" aria-label="@Model.CardName">
+    <figure>
+        <picture>
+            <source srcset="@Url.ContentUrl(Model.Image)" media="(min-width: 206px)" />
+            <img src="@Url.ContentUrl(Model.Image)" alt="@Model.CardName" width="206" height="206" style="border-color:@Model.BorderType;" />
+        </picture>
+    </figure>
+    <span class="d-flex align-items-center gap-1">
+        @Html.PropertyFor(x => x.CardName)
+        <svg-partial src="cta-arrow.svg"></svg-partial>
+    </span>
+
+</a>

@@ -1,0 +1,70 @@
+﻿@using empty_cms.Utils;
+@model CardBlock
+
+<style>
+    .card {
+        cursor: pointer;
+        transition: background-color 0.3s;
+        background-color: #F3F3F3;
+    }
+
+        .card img {
+            border-bottom: solid;
+            border-width: 5px;
+            color: #F4B501;
+            transition: border-width 0.3s;
+        }
+
+        .card:hover {
+            background-color: #D9D9D9;
+        }
+
+            .card:hover img {
+                border-width: 10px;
+            }
+
+            .card:hover .title-card {
+                text-decoration: underline;
+            }
+
+            .card:hover .cta-link {
+                font-weight: bold;
+            }
+
+    .title-card {
+        font-family: "Helvetica Neue", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        color: #012F3C;
+    }
+
+    .description-card {
+        font-family: "Helvetica Neue", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.09px;
+        text-align: left;
+        color: #012F3C;
+    }
+</style>
+
+<div class="card d-flex flex-column gap-4 rounded-2 border-0">
+    <figure>
+        <picture>
+            <source srcset="@Url.ContentUrl(Model.Image)" media="(min-width: 206px)" />
+            <img class="rounded-top-2" src="@Url.ContentUrl(Model.Image)" alt="@Model.Title" width="364" height="204" />
+        </picture>
+    </figure>
+    <div class="d-flex flex-column gap-3 px-4">
+        <div class="title-card">
+            @Html.PropertyFor(x => x.Title)
+        </div>
+        <div class="description-card">@Html.PropertyFor(x => x.Description)</div>
+    </div>
+    <a class="cta-link px-4 mb-4" href="@Model.ReadMore.Href" target="@Model.ReadMore.Target" rel="noopener noreferrer" aria-label="@Model.ReadMore.Text">
+        @Model.ReadMore.Text
+        <svg-partial src="cta-arrow.svg"></svg-partial>
+    </a>
+</div>

@@ -1,8 +1,9 @@
 {
   "profiles": {
-    "empty-cms": {
+    "Start": {
       "commandName": "Project",
-      "launchBrowser": true,
+      "preLaunchTask": "npm: watch sass",
+      "workingDirectory": "$(ProjectDir)",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
@@ -12,16 +13,15 @@
       "commandName": "IISExpress",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "sqlDebugging": false
+      }
     }
   },
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:60333/",
-      "sslPort": 44378
+      "applicationUrl": "https://localhost:44301/",
+      "sslPort": 44343
     }
   }
 }

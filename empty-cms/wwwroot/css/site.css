@@ -1,0 +1,36 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.cta-link {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.49px;
+  letter-spacing: -0.015em;
+  text-align: left;
+  color: #034153;
+}
+
+button {
+  width: 319px;
+  height: 71px;
+  border-radius: 6px 0px 0px 0px;
+  color: white;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.36px;
+  letter-spacing: -0.015em;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  background-color: antiquewhite;
+}
+button:hover {
+  background-color: #034153;
+}
+
+/*# sourceMappingURL=site.css.map */

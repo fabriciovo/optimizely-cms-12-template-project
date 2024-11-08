@@ -2,6 +2,7 @@ using EPiServer.Cms.Shell;
 using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
+using EPiServer.Web;
 using EPiServer.Web.Routing;
 
 namespace empty_cms
@@ -24,6 +25,10 @@ namespace empty_cms
                 services.Configure<SchedulerOptions>(options => options.Enabled = false);
             }
 
+            services.Configure<UIOptions>(uiOptions =>
+            {
+                uiOptions.InlineBlocksInContentAreaEnabled = true;
+            });
             services
                 .AddCmsAspNetIdentity<ApplicationUser>()
                 .AddCms()

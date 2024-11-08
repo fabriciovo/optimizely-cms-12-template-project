@@ -1,0 +1,16 @@
+{
+  "name": "empty-cms",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "compile-sass:build": "sass wwwroot/css:wwwroot/css ",
+    "compile-sass:watch": "sass --watch wwwroot/css:wwwroot/css"
+  },
+  "keywords": [],
+  "author": "Fabricio Varisco",
+  "devDependencies": {
+    "bootstrap": "^5.3.3",
+    "eslint": "^9.14.0",
+    "sass": "^1.80.6"
+  }
+}

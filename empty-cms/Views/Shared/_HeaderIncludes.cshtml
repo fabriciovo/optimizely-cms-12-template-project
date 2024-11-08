@@ -1,4 +1,29 @@
 ﻿@model PageViewModel
 <head>
     <title>@Model.PageTitle</title>
+
+    <!-- Meta Tags for SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    @*     <meta name="description" content="@Model.MetaDescription" />
+    *@    @*   <meta name="keywords" content="@Model.MetaKeywords" />
+    <meta name="author" content="Your Company Name" />
+    *@
+
+    <!-- Favicon -->
+    @*     <link rel="icon" href="~/favicon.ico" type="image/x-icon" />*@
+    <!-- Stylesheets -->
+
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <!-- Web Fonts (if applicable) -->
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Additional Meta Tags for Mobile Optimization -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="@Model.PageTitle" />
+    <link rel="apple-touch-icon" href="~/images/apple-touch-icon.png">
+
+
 </head>

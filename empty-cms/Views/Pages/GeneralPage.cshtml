@@ -1,4 +1,8 @@
 ﻿@model PageViewModel<GeneralPage>
-@Model.Page.Name
 
-@Html.PropertyFor(x => x.Page.ContentArea)
+<h1>@Model.Page.Headline</h1>
+<section>
+    @Html.PropertyFor(x => x.Page.Body)
+
+    @Html.PropertyFor(x => x.Page.ContentArea)
+</section>

@@ -1,0 +1,6 @@
+﻿@using empty_cms.Utils;
+@model CardListBlock
+
+<section class="d-flex flex-wrap gap-3 justify-content-center">
+    @Html.PropertyFor(x => x.Cards, new { HasContainer = false })
+</section>
